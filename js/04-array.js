@@ -21,11 +21,7 @@ const paskutinioPozicija = pazymiuKiekis -1;
 console.log(pazymiai[paskutinioPozicija]);
 console.log(pazymiai[pazymiai.length -1]);
 
-//vidurkis
-
-
-//kiekis
-
+//vidurkis - ziureti 07-for.js
 
 //maziausias - not this time
 //didziausias - not this time
