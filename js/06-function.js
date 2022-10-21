@@ -31,12 +31,25 @@ console.log('Petras: ', petroVidurkis);
 
 /*
 Funkcija gauna teksta ir turi grazinti sakini:
-"Vardo pirma raide yra [V] ir vardas sudarytas is [5] raidziu."
+"Vardo "Vardas" pirma raide yra [V] ir vardas sudarytas is [5] raidziu."
 */
 
-function vardoAnalize (a) {
-return `Vardo pirma raide yra ${a[0]} ir vardas sudarytas is ${a.length} raidziu.`;
-};
+function nameX (x) {
+    return `Vardo "${x}" pirma raide yra ${x[0]} ir vardas sudarytas is ${x.length} raidziu.`;
+}
 
-const petroVardas = vardoAnalize ('Petras');
-console.log(petroVardas);
+console.log(nameX('Tomas'));
+
+const vardasOna = nameX("Ona");
+console.log(vardasOna);
+
+/*
+Funkcija gaima du skaicius ir turi grazinti lygti su sprendimus, pvz:
+2+2=4
+*/
+
+function suma (a, b) {
+return `${a} + ${b} = ${a+b}`;
+}
+
+console.log(suma(2,2));
