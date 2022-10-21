@@ -29,4 +29,14 @@ return pazymiuSuma/pazymiuSarasas.length;
 const petroVidurkis = vidurkis(petras);
 console.log('Petras: ', petroVidurkis);
 
+/*
+Funkcija gauna teksta ir turi grazinti sakini:
+"Vardo pirma raide yra [V] ir vardas sudarytas is [5] raidziu."
+*/
 
+function vardoAnalize (a) {
+return `Vardo pirma raide yra ${a[0]} ir vardas sudarytas is ${a.length} raidziu.`;
+};
+
+const petroVardas = vardoAnalize ('Petras');
+console.log(petroVardas);
