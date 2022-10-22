@@ -62,7 +62,7 @@ console.log(vidurkisForOf);
 */
 
 let sumaForEach = 0;
-pazymiai.forEach((a, b) => {
+pazymiai.forEach((a) => {
 sumaForEach += a;
 });
 
