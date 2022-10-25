@@ -96,3 +96,4 @@ console.log(bigNum([1, 23, 4]));
 console.log(bigNum([-1, -23, -4]));
 console.log(bigNum([]));
 console.log(bigNum('testas'));
+

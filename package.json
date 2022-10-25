@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./js/10-function-praktika.js",
+    "dev": "nodemon ./js/15-letters.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
