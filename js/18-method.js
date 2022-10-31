@@ -56,7 +56,130 @@ console.log(rytas.reverse());
 console.log(rytas.push('ka tu?')); //unshift(prideda is priekio) -- pop(nuima nuo galo) -- shift (nuima is priekio)
 
 //map, filter, sort, reduce, every, flat, forEach
+console.log('map-individualiu reiksmiu konvertavimas');
+
+const marks = [10, 2, 3, 58];
+console.log(marks.map(item => item));
+console.log(marks.map(item => 2 * item));
+
+console.log('filter');
+console.log(marks.filter(item => item));
+console.log(marks.filter(item => item > 5));
+
+const letters = ['a', 'b'];
+console.log('reduce - sutraukia visas reiksmes i viena reiksme');
+console.log(marks.reduce((total, item) => total + item, 0));
+console.log(letters.reduce((total, item) => total + item));
+
+
+console.log('sort');
+console.log(marks.sort((a, b) => a - b));
+console.log(marks.sort((a, b) => b - a));
+
+console.log(letters.sort());
+console.log(letters.sort().reverse());
+
+console.log('flat');
+const matrix = [
+    [1, [10, 20], 2],
+    [2, 3]
+]
+console.log(matrix.flat());
+
+console.log('... - spread operator');
+console.log(Math.min(1, 2, -5, 6));
+
+const minMax = [1, 5, -4, 3];
+console.log(Math.min(...minMax));
+
 
 /*
-OBJECT
+OBJECT - neturi metodu
 */
+console.log('---------OBJECT---------');
+
+const person = {
+    name: 'Petras',
+    age: 99,
+    isMarried: true
+}
+
+console.log(person.age);
+console.log(person['age']);
+
+console.log('automatinis objekto VISU raktazodziu istraukimas');
+const personKeys = Object.keys(person)
+console.log(personKeys);
+
+console.log('automatinis objekto VISU reiksmiu istraukimas');
+for (const key of personKeys) {
+    console.log(key, ':', person[key]);
+};
+
+//FOR-IN -----> ciklas, tik objektams naudojamas
+console.log('FOR-IN');
+for (const key in person) {
+    console.log(key, ':', person[key]);
+}
+
+console.log('... - spread operator (naudojimas objekte)');
+
+// console.log({ ...person, car: 'Tesla' });
+
+const newPerson = { ...person, car: 'Tesla' };
+console.log(newPerson);
+
+
+
+
+// const a = {
+//     a: 'a',
+//     b: 'b'
+// }
+
+// const b = {
+//     b: 'c',
+//     d: 'd'
+// }
+
+// console.log(Object.assign(a, b));
+
+
+
+
+/*
+DESTRUCTURING - destrukturizacimas
+*/
+console.log('---------DESTRUCTURING---------');
+
+const skaiciai = [10, 2, 8];
+const pirmasSkaicius = skaiciai[0];
+
+const [a, b, c] = skaiciai;
+console.log(a, b, c);
+
+
+//destrukturizacimas su objektais
+const car = {
+    name: 'T',
+    model: 'X',
+    color: 'red'
+}
+
+const { name } = car;
+console.log(name);
+
+/*
+RANDOM
+*/
+console.log('---------RANDOM---------');
+const random = Math.floor(Math.random() * 10); //nuo 0 iki 9
+console.log(random);
+
+
+console.log('---------RANDOM nuo iki funkcija---------');
+function randomF(nuo, iki) {
+    return nuo + Math.floor(Math.random() * (iki - nuo + 1));
+}
+
+console.log(randomF(5, 9));

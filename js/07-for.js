@@ -2,7 +2,7 @@
 for - ciklas/loop
 
 loop: for, while, for-of, foreach...
-object loop: for-in
+object loop: for-in (ziureti methods.js prie objektu)
 */
 
 const pazymiai = [10, 2];
@@ -16,9 +16,9 @@ kokiu zingsniu daryti cikla: i++;
 
 //FOR
 let sumaFor = 0;
-for (let i=0; i< pazymiai.length; i++) {
+for (let i = 0; i < pazymiai.length; i++) {
 
-    const pazymys = pazymiai [i];
+    const pazymys = pazymiai[i];
     sumaFor += pazymys;
 }
 
@@ -34,7 +34,7 @@ let sumaWhile = 0;
 let i2 = 0;
 
 while (i2 < pazymiai.length) {
-    const pazymys = pazymiai [i2];
+    const pazymys = pazymiai[i2];
     sumaWhile += pazymys;
     i2++
 }
@@ -49,7 +49,7 @@ console.log(vidurkisWhile);
 let sumaForOf = 0;
 
 for (const pazymys of pazymiai) {
-    sumaForOf+= pazymys;
+    sumaForOf += pazymys;
 }
 
 const vidurkisForOf = sumaForOf / pazymiai.length;
@@ -63,7 +63,7 @@ console.log(vidurkisForOf);
 
 let sumaForEach = 0;
 pazymiai.forEach((a) => {
-sumaForEach += a;
+    sumaForEach += a;
 });
 
 const vidurkisForEach = sumaForEach / pazymiai.length;
